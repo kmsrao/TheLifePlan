@@ -1,0 +1,118 @@
+<div class="row">
+
+
+
+  <div class="col-md-12">
+    <p></p>
+    <div class="row">
+
+      <div class="col-md-4">
+        <label> Loan Amount</label>
+      </div>
+      <div class="col-md-6">
+        <input type="text" id="PrincipalAmountInput" class="form-control" [(ngModel)]="PrincipalAmount"
+          (keypress)="OnKeyPressNumber($event)" (keyup)="calculateEMI()" />
+
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4">
+        <label>Interest</label>
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" [(ngModel)]="Interest" (keypress)="OnKeyPressNumber($event)"
+          (keyup)="calculateEMI()" />
+
+      </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-4">
+        <label>Loan Tenure</label>
+      </div>
+
+      <div class="col-md-6">
+        <input type="text" class="form-control" [(ngModel)]="LoanTenure" (keypress)="OnKeyPressNumberNoDecimal($event)"
+          (keyup)="calculateEMI()">
+
+        <p></p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <input type="radio" value="month" name="TenureType" [(ngModel)]="TenureType"
+              (change)="OnTenureSelectionChanged()">
+            <label>
+              Months </label>
+          </div>
+          <div class="col-md-6">
+            <input type="radio" value="year" name="TenureType" [(ngModel)]="TenureType"
+              (change)="OnTenureSelectionChanged()">
+            <label>Years</label>
+          </div>
+        </div>
+
+      </div>
+
+
+      <p></p>
+
+      <p></p>
+
+
+
+
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-8">
+        <button (click)="OnUserClick()" class="btn btn-primary">Calculate EMI
+
+        </button>
+
+      </div>
+      <div class="col-md-2">
+      </div>
+
+    </div>
+
+    <p></p>
+
+    <br>
+
+    <div class="row" style="text-align: center;">
+
+      <label> EMI Amount </label>
+      <p> </p>
+      <label class="h3"> {{EMIValue}} </label>
+
+
+    </div>
+    <div class="row" style="text-align: center;">
+
+
+      <label> Interest </label>
+      <p></p>
+      <label class="h3"> {{InterestValue}} </label>
+
+    </div>
+    <div class="row" style="text-align: center;">
+
+      <label> Total Payable</label>
+      <p></p>
+      <label class="h3"> {{TotalValue}} </label>
+
+
+    </div>
+
+
+  </div>
+
+
+</div>
+<p></p>

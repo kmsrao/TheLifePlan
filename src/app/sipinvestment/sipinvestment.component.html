@@ -1,0 +1,119 @@
+
+  
+  
+    <div class="row">
+  
+      
+     
+      <div class="col-md-12">
+        <p></p>
+        <div class="row">
+        
+          <div class="col-md-4">
+            <label style="text-align: justify;"> I Need</label>
+          </div>
+          <div class="col-md-6">
+            <input type="text" id="PrincipalAmountInput" class="form-control" [(ngModel)]="TargetAmount"
+              (keypress)="OnKeyPressNumber($event)" (keyup)="calculateSIP()" />
+        
+          </div>
+        </div>
+  <br>
+        <div class="row">
+          <div class="col-md-4">
+            <label>Expected Interest</label>
+          </div>
+        
+          <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="ExpectedInterest" (keypress)="OnKeyPressNumber($event)"
+              (keyup)="calculateSIP()" />
+        
+          </div>
+        </div>
+  
+      <br>
+  
+        <div class="row">
+          <div class="col-md-4">
+            <label>Investment Tenure</label>
+          </div>
+        
+          <div class="col-md-6">
+            <input type="text" class="form-control" [(ngModel)]="SIPTenure" (keypress)="OnKeyPressNumberNoDecimal($event)"
+              (keyup)="calculateSIP()">
+  
+              <p></p>
+        
+  
+          </div>
+        
+    
+  
+             
+              <p></p>
+  
+  
+  
+            <p></p>
+  
+  
+  
+  
+  
+        </div>
+  
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-8">
+            <button (click)="OnUserClick()" class="btn btn-primary">Calculate SIP
+  
+            </button>
+  
+          </div>
+          <div class="col-md-2">
+          </div>
+  
+        </div>
+  
+        <p></p>
+  
+        <br>
+  
+        <div class="row" style="text-align: center;">
+  
+          <label> SIP Amount </label>
+          <p> </p>
+          <label class="h3"> {{SIPValue}} </label>
+  
+  
+        </div>
+        <div class="row" style="text-align: center;">
+  
+  
+          <label> Return on Investment </label>
+          <p></p>
+          <label class="h3"> {{ReturnValue}} </label>
+  
+        </div>
+        <div class="row" style="text-align: center;">
+  
+          <label> Total Amount Accumulated</label>
+          <p></p>
+          <label class="h3"> {{TotalValue}} </label>
+  
+  
+  
+        </div>
+  
+  
+      </div>
+  
+      <div class="col-md-4">
+  
+      </div>
+  
+    </div>
+    <p></p>
+  
+  
